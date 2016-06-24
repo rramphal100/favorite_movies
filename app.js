@@ -115,6 +115,39 @@ app.get('/loginerror', function(req,res){
 	res.send("<center><h1>Error! Invalid Login</h1><p>Click <a href='/login'>here</a> to return to the login page.</p></center>");
 });
 
+//signup page
+app.get('/signup', function(req,res,next){
+	res.render('signup');
+});
+
+//create new user in database
+app.post('/signup', function(req,res,next){
+	var username = req.body.username;
+	var password = req.body.password;
+	var confirm = req.body.confirm;
+	db.any('SELECT * FROM users WHERE username=\'' + username + '\'')
+	.then(function(users){
+		if(users[0] == undefined){
+			if(password == confirm){
+				db.none('INSERT INTO users (username, password) VALUES (\'' + username + '\', \'' + password + '\')')
+				.catch(function(err){
+					return next(err);
+				});
+				res.redirect('/login');
+			}
+			else{
+				res.redirect('/signup');
+			}
+		}
+		else{
+			res.redirect('/signup');
+		}
+	})
+	.catch(function(err){
+		return next(err);
+	});
+});
+
 //run the web server on port 3000
 app.listen(3000, function(){
 	console.log("Favorite Movies app listening on port 3000.");
