@@ -18,6 +18,8 @@ $("#form").on("submit", function(e){
 		$("#plot").text(response.Plot);
 		$("#result").css({"display": "block", "background-color": "#000000"});
 		$("#id").val(response.imdbID);
+		$("#description").val(response.Plot);
+		$("#poster").val(response.Poster);
 	});
 });
 
