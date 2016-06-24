@@ -20,6 +20,8 @@ $("#form").on("submit", function(e){
 		$("#id").val(response.imdbID);
 		$("#description").val(response.Plot);
 		$("#poster").val(response.Poster);
+		$("#title_form").val(response.Title);
+		$("#save").css({visibility: "visible"});
 	});
 });
 

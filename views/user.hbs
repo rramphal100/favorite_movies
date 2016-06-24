@@ -1,3 +1,12 @@
+<header>
+	<nav>
+		<ul>
+			<li><a href='/about'>About</a></li>
+			<li><a href='/'>Logout</a></li>
+		</ul>
+	</nav>
+</header>
+
 <h1>Movie Lists</h1>
 <h2>{{username}}</h2>
 <p><a href='/search/{{username}}'>Search</a></p>
@@ -6,8 +15,8 @@
 <h3>{{this.title}}</h3>
 <img src='{{this.imgsrc}}'>
 <p>{{this.description}}</p>
-<form action='/users' method='delete'>
-	<input type='hidden' name='id' value='{{this.imdbid}}'>
+<form action='/delete/{{this.imdbid}}' method='post'>
+	<input type='hidden' name='username' value='{{username}}'>
 	<input type='submit' value='Delete'>
 </form>
 

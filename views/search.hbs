@@ -1,3 +1,12 @@
+<header>
+	<nav>
+		<ul>
+			<li><a href='/about'>About</a></li>
+			<li><a href='/'>Logout</a></li>
+		</ul>
+	</nav>
+</header>
+
 <h1>Movie Lists</h1>
 <p><a href='/users/{{username}}'>My Favorites</a></p>
 <h3>{{username}}, search for a movie here!</h3>
@@ -23,6 +32,7 @@
 	<form id='save' action='/savedata' method='post'>
 		<input type='hidden' name='username' value='{{username}}'>
 		<input type='hidden' name='id' id='id'>
+		<input type='hidden' name='title' id='title_form'>
 		<input type='hidden' name='description' id='description'>
 		<input type='hidden' name='poster' id='poster'>
 		<input type='submit' value='Save this Movie'>
