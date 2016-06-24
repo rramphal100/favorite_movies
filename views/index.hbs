@@ -1,0 +1,10 @@
+<h1>Movie Lists</h1>
+<p></p>
+<h3>Welcome to Movie Lists, the site where you will be able to sign in / sign up and save lists of your favorite movies! Please use the links above to sign in or create a new account.</h3>
+<p></p>
+<p>Below is a list of our current users.</p>
+<ul id='user_list'>
+{{#each users}}
+	<li>{{this.username}}</li>
+{{/each}}
+</ul>
