@@ -1,3 +1,63 @@
+h1{
+	font-family: Impact, charcoal, sans-serif;
+	font-size: 40px;
+	text-align: center;
+	clear: right;
+}
+
+h3{
+	font-size: 25px;
+}
+
+.head{
+	width: 100px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+nav{
+	float: right;
+}
+
+nav ul{
+	list-style: none;
+}
+
+nav ul li{
+	display: inline;
+	text-decoration: none;
+	font-style: normal;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-right: 10px;
+}
+
+a{
+	text-decoration: none;
+	color: #0044ff;
+}
+
+input{
+	display: block;
+	height: 100%;
+	margin: 0 auto;
+}
+
+input[type="submit"]{
+	background-color: #99ccff;
+}
+
+label{
+	font-size: 20px;
+}
+
+
+.user_list {
+	list-style-type: none;
+	text-align: center;
+	font-size: 20px;
+}
+
 #title{
 	font-family: sans-serif;
 	color: #0088ff;
